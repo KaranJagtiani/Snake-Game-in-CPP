@@ -1,7 +1,7 @@
 # Snake Game in C++
 Snake Game created using graphics.h library
 
-![](images/menu.png)
+![](images/menu.jpg)
 
 ![](images/in_game.png)
 
