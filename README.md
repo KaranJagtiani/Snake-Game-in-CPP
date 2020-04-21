@@ -21,5 +21,29 @@ iii)	Now, we are back to the head node, display the squares by traversing back t
 
 iv)	Repeat the process till game is over, or game is complete, or ESC is pressed.
 
-## Forest Fire Algorithm for polygon filling using Queue(Linked List) Data Structure
+## Forest Fire Algorithm for polygon filling
 ![](images/forest_fire.jpg)
+
+Queue Data Structure implemented using Linked List was used for this algorithm.
+
+```
+while(head){
+	r = deQueue(&head);
+	colorBool = getpixel(r->x, r->y) == colorToRemove;
+
+	if(r){ // i.e Not Null
+		putpixel(r->x, r->y, colorToAdd);
+	}
+	if(colorBool){
+		if(!inQueue(head, r->x+1, r->y))
+			enQueue(&head, r->x+1, r->y);
+		if(!inQueue(head, r->x-1, r->y))
+			enQueue(&head, r->x-1, r->y);
+		if(!inQueue(head, r->x, r->y+1))
+			enQueue(&head, r->x, r->y+1);
+		if(!inQueue(head, r->x, r->y-1))
+			enQueue(&head, r->x, r->y-1);
+	}
+	delete r;
+}
+```
