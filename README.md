@@ -1,5 +1,5 @@
 # Snake Game in C++
-Snake Game created using graphics.h library
+Snake game created using C++ and the graphics.h library.
 
 ![](images/menu.jpg)
 
@@ -12,19 +12,19 @@ Logic for displaying the trailing body of the snake.
 
 i)	Traverse the list till the end using next pointer.
 
-ii)	From the last node, traverse back to the head by using previous pointer, while copying
+ii)	From the last node, traverse back to the head by using previous pointer, while:
 
     head->x = head->prev->x
     head->y = head->prev->y
     
 iii)	Now, we are back to the head node, display the squares by traversing back to the last node through next pointer.
 
-iv)	Repeat the process till game is over, or game is complete, or ESC is pressed.
+iv)	Repeat the process till game is over, or is complete, or ESC is pressed.
 
-## Forest Fire Algorithm for polygon filling
+## Forest Fire algorithm for polygon filling
 ![](images/forest_fire.jpg)
 
-Queue Data Structure implemented using Linked List was used for this algorithm.
+Queue Data Structure implemented using Linked List was used for implementing this algorithm for polygon filling.
 
 ```
 while(head){
